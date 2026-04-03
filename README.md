@@ -63,7 +63,31 @@ Choose one of these two ways depending on your team setup:
    - Best for single-project experiments or environments without install scripts.
    - You must manually sync updates.
 
-If you are deciding for organization-wide use, start with **GitHub distribution** and keep direct-copy mode as a fallback.
+### Platform Install
+
+#### VS Code Copilot (Skills)
+Run the following in your project root to install the skill into `.github/skills`:
+
+```powershell
+git clone --depth 1 --filter=blob:none --sparse https://github.com/extravert/daily-development-spec.git daily-development-spec-tmp
+Set-Location daily-development-spec-tmp
+git sparse-checkout set plugins/daily-development-spec/skills/daily-development-spec
+mkdir -p ..\.github\skills -ErrorAction SilentlyContinue
+Copy-Item "plugins/daily-development-spec/skills/daily-development-spec" -Destination "..\.github\skills\daily-development-spec" -Recurse
+Set-Location ..
+Remove-Item daily-development-spec-tmp -Recurse -Force
+Get-Item .\.github\skills\daily-development-spec\SKILL.md
+```
+
+#### Qoder
+```bash
+npx skills add https://github.com/extravert/daily-development-spec --skill daily-development-spec -a qoder
+```
+
+#### Vs Code Codex Plugin
+```text
+/skill-installer https://github.com/extravert/daily-development-spec.git
+```
 
 ### Quickest Start: Claude Code Plugin
 

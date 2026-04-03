@@ -44,7 +44,31 @@ Phase 3: Progress Tracking & Delivery
    - 适合临时验证、单项目快速落地。
    - 后续升级需要手动替换文件。
 
-如果你在决定“给其他人怎么用”，优先用 **GitHub 分发**；直接复制模式可作为兜底方案。
+### 各平台安装方式
+
+#### VS Code Copilot（Skills）
+在你的项目根目录执行以下命令，把 skill 安装到 `.github/skills`：
+
+```powershell
+git clone --depth 1 --filter=blob:none --sparse https://github.com/extravert/daily-development-spec.git daily-development-spec-tmp
+Set-Location daily-development-spec-tmp
+git sparse-checkout set plugins/daily-development-spec/skills/daily-development-spec
+mkdir -p ..\.github\skills -ErrorAction SilentlyContinue
+Copy-Item "plugins/daily-development-spec/skills/daily-development-spec" -Destination "..\.github\skills\daily-development-spec" -Recurse
+Set-Location ..
+Remove-Item daily-development-spec-tmp -Recurse -Force
+Get-Item .\.github\skills\daily-development-spec\SKILL.md
+```
+
+#### Qoder
+```bash
+npx skills add https://github.com/extravert/daily-development-spec --skill daily-development-spec -a qoder
+```
+
+#### Vs Code Codex Plugin
+```text
+/skill-installer https://github.com/extravert/daily-development-spec.git
+```
 
 ### Claude Code（插件方式）
 
