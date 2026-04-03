@@ -1,0 +1,8 @@
+{
+  "name": "daily-development-spec",
+  "description": "Standardized workflow for daily incremental requirements: new features, APIs, scripts, UI changes. Ensures code consistency, compliance checks, progress tracking, and cross-conversation context recovery.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Extravert"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "daily-development-spec",
+  "owner": {
+    "name": "extravert"
+  },
+  "metadata": {
+    "description": "Standardized workflow for daily incremental requirements with compliance checks, testing, and progress tracking"
+  },
+  "plugins": [
+    {
+      "name": "daily-development-spec",
+      "source": "./plugins/daily-development-spec",
+      "description": "Daily development workflow for incremental tasks: requirement clarification, compliance design, implementation with testing, and progress delivery.",
+      "version": "1.0.0",
+      "author": {
+        "name": "extravert"
+      },
+      "homepage": "https://github.com/extravert/daily-development-spec",
+      "repository": "https://github.com/extravert/daily-development-spec",
+      "license": "MIT",
+      "keywords": ["daily-development", "workflow", "compliance", "testing", "progress-tracking"]
+    }
+  ]
+}
