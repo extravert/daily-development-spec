@@ -1,4 +1,4 @@
-**English** | **中文**
+**English** | [Chinese](./README.zh-CN.md)
 
 # Daily Development Specification
 
