@@ -258,3 +258,7 @@ This is the entire workflow. Standalone, no dependencies. Works on any AI coding
 | **No structure** (standard chat) | Flexible, minimal setup | Inconsistent quality, lost context, duplicated testing effort |
 | **Heavy framework** (Superpowers, oh-my-claude) | Comprehensive, all features built-in | Slow, locked to one platform, harder to customize |
 | **This workflow** | Lightweight, persistent, versatile, clear phases | Requires discipline to follow checklist, progress lives in your repo |
+
+## License
+
+MIT
