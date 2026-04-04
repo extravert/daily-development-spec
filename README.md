@@ -52,7 +52,7 @@ Daily Development Specification finds the middle: **structured but flexible, sta
 ### Application Methods
 
 1. **GitHub**
-   - Install via GitHub repository to `.github/skills` (Refer to [Platform Install](#Platform Install)).
+   - Install via the GitHub repo into `.github/skills` (see [Platform Install](#platform-install)).
 
 2. **Directly Copy `SKILL.md`**
    - Only copy `plugins/daily-development-spec/skills/daily-development-spec/SKILL.md`.
@@ -227,14 +227,6 @@ This is the entire workflow. Standalone, no dependencies. Works on any AI coding
 | **Compliance Checks** | Phase 1 prevents code drift before implementation |
 | **Markdown-as-Database** | Progress, designs, specs all human-readable and version-controllable |
 | **Platform-Agnostic** | SKILL.md works with Claude Code, Cursor, Windsurf, Cline, or any Markdown-capable assistant |
-
-## Comparison with Other Approaches
-
-| Approach | Pros | Cons |
-|----------|------|------|
-| **No structure** (standard chat) | Flexible, minimal setup | Inconsistent quality, lost context, duplicated testing effort |
-| **Heavy framework** (Superpowers, oh-my-claude) | Comprehensive, all features built-in | Slow, locked to one platform, harder to customize |
-| **This workflow** | Lightweight, persistent, versatile, clear phases | Requires discipline to follow checklist, progress lives in your repo |
 
 ## License
 
