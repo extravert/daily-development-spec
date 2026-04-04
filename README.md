@@ -47,21 +47,16 @@ Daily Development Specification finds the middle: **structured but flexible, sta
 - **Cross-team consistency**: Everyone follows the same 4-phase checklist; same code standards
 - **Persistent development**: Sessions last days or weeks; progress never gets lost
 
-## Getting Started
+## Quick Start
 
-### Distribution Options (Recommended)
+### Application Methods
 
-Choose one of these two ways depending on your team setup:
+1. **GitHub**
+   - Install via GitHub repository to `.github/skills` (Refer to [Platform Install](#Platform Install)).
 
-1. **GitHub distribution (recommended for teams)**
-   - Publish and update from this repository.
-   - Users install via scripts and can re-run them for updates.
-   - Best for shared standards, version tracking, and repeatable onboarding.
-
-2. **Direct copy of `SKILL.md` (recommended for quick trials)**
-   - Copy only `plugins/daily-development-spec/skills/daily-development-spec/SKILL.md`.
-   - Best for single-project experiments or environments without install scripts.
-   - You must manually sync updates.
+2. **Directly Copy `SKILL.md`**
+   - Only copy `plugins/daily-development-spec/skills/daily-development-spec/SKILL.md`.
+   - Suitable for any platform; simply place it in your project directory or system prompt. Progress files cannot be automatically generated, but the methodology is fully usable.
 
 ### Platform Install
 
