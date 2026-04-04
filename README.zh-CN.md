@@ -79,6 +79,19 @@ Remove-Item daily-development-spec-tmp -Recurse -Force
 Get-Item .\.github\skills\daily-development-spec\SKILL.md
 ```
 
+Linux/macOS（bash）：
+
+```bash
+git clone --depth 1 --filter=blob:none --sparse https://github.com/extravert/daily-development-spec.git daily-development-spec-tmp
+cd daily-development-spec-tmp
+git sparse-checkout set plugins/daily-development-spec/skills/daily-development-spec
+mkdir -p ../.github/skills
+cp -r plugins/daily-development-spec/skills/daily-development-spec ../.github/skills/daily-development-spec
+cd ..
+rm -rf daily-development-spec-tmp
+ls -la ./.github/skills/daily-development-spec/SKILL.md
+```
+
 #### Qoder
 ```bash
 npx skills add https://github.com/extravert/daily-development-spec --skill daily-development-spec -a qoder
