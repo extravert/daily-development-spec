@@ -135,37 +135,6 @@ The framework includes templates for common daily task types. Reference these in
 
 Each template details expected deliverables, testing approach, and review criteria.
 
-## Usage
-
-### Example: Adding an API Endpoint
-
-```
-User: "Add a POST endpoint for user registration to the auth service"
-
-Phase 0: Assistant clarifies:
-- Scope: auth service only, no email validation yet
-- Success: endpoint callable, returns user ID on success, validates required fields
-- Testing: unit tests for validation, integration test with DB
-
-Phase 1: Assistant checks:
-- Follows naming conventions (camelCase functions, PascalCase classes)
-- No conflicts with existing endpoints
-- Documents API specification and error codes
-- Design doc: request validation → hash password → DB insert → return response
-
-Phase 2: Assistant implements:
-- endpoint + password hashing + error handling
-- Unit tests (>80% coverage)
-- Integration test with test database
-- Security review: injection prevention, input validation
-
-Phase 3: Assistant archives work:
-- Updates progress file
-- Moves design doc to docs/progress/completed/
-- Updates API documentation
-- "Ready for code review and deployment"
-```
-
 ### Cross-Session Continuity
 
 Start a requirement, then pause. Days or weeks later, run the same requirement again. The assistant checks `docs/progress/MASTER.md`, sees you're in Phase 2 with 3 tests remaining, and continues exactly where you left off.
