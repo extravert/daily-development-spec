@@ -42,9 +42,10 @@ install_from_local() {
 }
 
 install_from_remote() {
-    local tmp_dir
+    local tmp_dir tmp_dir_q
     tmp_dir="$(mktemp -d)"
-    trap 'rm -rf "$tmp_dir"' EXIT
+    printf -v tmp_dir_q '%q' "$tmp_dir"
+    trap "rm -rf -- $tmp_dir_q" EXIT
 
     echo "Downloading from $REPO_URL ..."
     git clone --depth 1 --filter=blob:none --sparse "$REPO_URL" "$tmp_dir/repo" 2>/dev/null

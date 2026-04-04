@@ -94,10 +94,10 @@ bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-sp
 
 以上脚本从 GitHub 仓库安装，并支持基于版本号的更新判断。
 
-## 使用示例
+## 使用示例（Qoder）
 
 ```
-/spec-dev add user authentication API
+/daily-development-spec 实现一个新脚本，导出 t_model_image_score_ali 表数据。
 ```
 
 Agent 会按四阶段推进，并在 `docs/progress/` 下持续更新状态。

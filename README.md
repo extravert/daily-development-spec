@@ -96,10 +96,10 @@ npx skills add https://github.com/extravert/daily-development-spec --skill daily
 /plugin install daily-development-spec@latest
 ```
 
-Reload plugins. Then:
+Reload plugins. Then use skill command（e.g. qoder's):
 
 ```
-/spec-dev add user authentication API
+/daily-development-spec 实现一个新脚本，导出 t_model_image_score_ali 表数据。
 ```
 
 That's it. The workflow runs automatically through 4 phases, creating progress files as it goes.
