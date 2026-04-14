@@ -104,14 +104,6 @@ npx skills add https://github.com/extravert/daily-development-spec --skill daily
 /plugin install daily-development-spec@latest
 ```
 
-重载插件后，即可使用（以 qoder 风格为例）：
-
-```text
-/daily-development-spec 实现一个新脚本，导出 t_model_image_score_ali 表数据。
-```
-
-流程会自动按四个阶段推进，并持续生成进度文件。
-
 ### Cursor （Windows PowerShell）
 
 在 PowerShell 中直接运行以下命令，自动下载 SKILL.md 到 Cursor 插件目录：
@@ -136,6 +128,14 @@ if (Test-Path $OutFile) {
 bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-spec/main/scripts/install-cursor.sh)
 bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-spec/main/scripts/install-codex.sh)
 ```
+
+重载插件后，即可使用（以 qoder 风格为例）：
+
+```text
+/daily-development-spec 实现一个新脚本，导出 t_model_image_score_ali 表数据。
+```
+
+流程会自动按四个阶段推进，并持续生成进度文件。
 
 ### 通用方式：直接使用 SKILL.md
 

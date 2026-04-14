@@ -104,13 +104,6 @@ npx skills add https://github.com/extravert/daily-development-spec --skill daily
 /plugin install daily-development-spec@latest
 ```
 
-Reload plugins. Then use skill command（e.g. qoder's):
-
-```
-/daily-development-spec 实现一个新脚本，导出 t_model_image_score_ali 表数据。
-```
-
-That's it. The workflow runs automatically through 4 phases, creating progress files as it goes.
 
 ### Cursor Windows PowerShell 
 
@@ -137,6 +130,13 @@ bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-sp
 bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-spec/main/scripts/install-codex.sh)
 ```
 
+Reload plugins. Then use skill command（e.g. qoder's):
+
+```
+/daily-development-spec 实现一个新脚本，导出 t_model_image_score_ali 表数据。
+```
+
+That's it. The workflow runs automatically through 4 phases, creating progress files as it goes.
 
 ### Generic Start: Copy SKILL.md
 
