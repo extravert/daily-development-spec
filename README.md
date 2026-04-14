@@ -97,7 +97,7 @@ npx skills add https://github.com/extravert/daily-development-spec --skill daily
 /skill-installer https://github.com/extravert/daily-development-spec.git
 ```
 
-### 最快上手：Claude Code 插件
+### Claude Code cli
 
 ```text
 /plugin add extravert/daily-development-spec
@@ -112,6 +112,31 @@ npx skills add https://github.com/extravert/daily-development-spec --skill daily
 
 流程会自动按四个阶段推进，并持续生成进度文件。
 
+### Cursor （Windows PowerShell）
+
+在 PowerShell 中直接运行以下命令，自动下载 SKILL.md 到 Cursor 插件目录：
+
+```powershell
+$SkillDir = "$env:APPDATA\.cursor\User\globalStorage\extensions\data"
+mkdir "$SkillDir\daily-development-spec" -ErrorAction SilentlyContinue
+$SkillUrl = "https://raw.githubusercontent.com/extravert/daily-development-spec/main/plugins/daily-development-spec/skills/daily-development-spec/SKILL.md"
+$OutFile = "$SkillDir\daily-development-spec\SKILL.md"
+Invoke-WebRequest -Uri $SkillUrl -OutFile $OutFile -MaximumRedirection 5
+if (Test-Path $OutFile) {
+    Write-Host "✓ SKILL.md 已成功下载到: $OutFile" -ForegroundColor Green
+    Write-Host "✓ 请重启 Cursor 以激活 Skill" -ForegroundColor Green
+} else {
+    Write-Host "✗ 下载失败，请检查网络连接" -ForegroundColor Red
+}
+```
+
+### 通过 GitHub 脚本安装（Cursor / Codex — Linux/macOS）
+
+```bash
+bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-spec/main/scripts/install-cursor.sh)
+bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-spec/main/scripts/install-codex.sh)
+```
+
 ### 通用方式：直接使用 SKILL.md
 
 适用于 Cursor、Windsurf、Cline 或其他助手：
@@ -121,13 +146,6 @@ npx skills add https://github.com/extravert/daily-development-spec --skill daily
 3. 发起需求："请按 Daily Development Specification 从 Phase 0 开始处理这个需求"
 
 该文件可独立工作，无额外依赖、无平台专属代码。
-
-### 通过 GitHub 脚本安装（Cursor / Codex）
-
-```bash
-bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-spec/main/scripts/install-cursor.sh)
-bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-spec/main/scripts/install-codex.sh)
-```
 
 脚本支持从 GitHub 安装并进行版本化更新。
 

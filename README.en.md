@@ -97,7 +97,7 @@ npx skills add https://github.com/extravert/daily-development-spec --skill daily
 /skill-installer https://github.com/extravert/daily-development-spec.git
 ```
 
-### Quickest Start: Claude Code Plugin
+### Claude Code Cli
 
 ```
 /plugin add extravert/daily-development-spec
@@ -112,6 +112,32 @@ Reload plugins. Then use skill command（e.g. qoder's):
 
 That's it. The workflow runs automatically through 4 phases, creating progress files as it goes.
 
+### Cursor Windows PowerShell 
+
+Run the following command in PowerShell to automatically download SKILL.md to the Cursor plugin directory:
+
+```powershell
+$SkillDir = "$env:APPDATA\.cursor\User\globalStorage\extensions\data"
+mkdir "$SkillDir\daily-development-spec" -ErrorAction SilentlyContinue
+$SkillUrl = "https://raw.githubusercontent.com/extravert/daily-development-spec/main/plugins/daily-development-spec/skills/daily-development-spec/SKILL.md"
+$OutFile = "$SkillDir\daily-development-spec\SKILL.md"
+Invoke-WebRequest -Uri $SkillUrl -OutFile $OutFile -MaximumRedirection 5
+if (Test-Path $OutFile) {
+    Write-Host "✓ SKILL.md downloaded successfully to: $OutFile" -ForegroundColor Green
+    Write-Host "✓ Please restart Cursor to activate the Skill" -ForegroundColor Green
+} else {
+    Write-Host "✗ Download failed, please check your network connection" -ForegroundColor Red
+}
+```
+
+### Script Install from GitHub (Cursor / Codex — Linux/macOS)
+
+```bash
+bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-spec/main/scripts/install-cursor.sh)
+bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-spec/main/scripts/install-codex.sh)
+```
+
+
 ### Generic Start: Copy SKILL.md
 
 For Cursor, Windsurf, Cline, or any other assistant:
@@ -121,13 +147,6 @@ For Cursor, Windsurf, Cline, or any other assistant:
 3. Start a requirement: "Process this requirement using Daily Development Specification, starting with Phase 0"
 
 The file works standalone — no dependencies, no platform-specific code.
-
-### Script Install from GitHub (Cursor / Codex)
-
-```bash
-bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-spec/main/scripts/install-cursor.sh)
-bash <(curl -sL https://raw.githubusercontent.com/extravert/daily-development-spec/main/scripts/install-codex.sh)
-```
 
 These scripts install from the GitHub repo and support version-aware updates.
 
